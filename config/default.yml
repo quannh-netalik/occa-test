@@ -1,0 +1,16 @@
+app:
+  baseUrl: /api
+  port: 3030
+
+dbUri: mongodb://localhost:27017/occa_db
+
+swagger:
+  name: occa-be
+  description: occa-be
+  docsBaseUrl: /api/docs
+  apiVersion: 1.0.0
+  appVersion: 1.0.0
+  auth:
+    name: Authorization
+    description: Enter the bearer token for Authorization headers
+    scheme: Bearer

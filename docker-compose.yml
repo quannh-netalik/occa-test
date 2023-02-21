@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  mongodb_container:
+    image: mongo:4.0
+    environment:
+      MONGO_INITDB_DATABASE: occa_db
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+volumes:
+  mongodb_data_container:

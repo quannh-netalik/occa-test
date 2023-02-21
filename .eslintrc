@@ -1,0 +1,73 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:import/typescript",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "plugin:security/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "eslint-plugin-import-order-alphabetical",
+    "jest",
+    "security"
+  ],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "Object": false,
+          "Function": false
+        },
+        "extendDefaults": true
+      }
+    ],
+    "class-methods-use-this": "off",
+    "jest/expect-expect": ["error", { "assertFunctionNames": ["expect", "request"] }],
+    "import/extensions": ["error", "never"],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-cycle": "off",
+    "import/no-duplicates": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/order": ["error", { "newlines-between": "always" }],
+    "import/prefer-default-export": "off",
+    "max-lines": ["error", { "max": 500, "skipComments": true, "skipBlankLines": true }],
+    "no-useless-constructor": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-empty-function": "off",
+    "no-unused-vars": "off",
+    "security/detect-non-literal-fs-filename": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}

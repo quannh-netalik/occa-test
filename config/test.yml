@@ -1,0 +1,14 @@
+app:
+  baseUrl: /api
+  port: 3030
+
+swagger:
+  name: occa-be
+  description: occa-be
+  docsBaseUrl: /api/docs
+  apiVersion: 1.0.0
+  appVersion: 1.0.0
+  auth:
+    name: Authorization
+    description: Enter the bearer token for Authorization headers
+    scheme: Bearer
